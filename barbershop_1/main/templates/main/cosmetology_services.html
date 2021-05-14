@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Косметологические услуги{% endblock %}
+
+{% block content %}
+     <div class="features">
+     <h1>Косметологические услуги</h1>
+
+         {% for el in cosmetologyServices %}
+              <div class="alert alert-warning">
+                  <h3>{{ el.title }}</h3>
+                  <p>{{ el.price }}</p>
+              </div>
+         {% endfor %}
+     </div>
+{% endblock %}
+

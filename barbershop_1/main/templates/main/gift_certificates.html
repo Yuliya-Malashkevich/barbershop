@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Подарочные сертификаты{% endblock %}
+
+{% block content %}
+     <div class="features">
+     <h1>Подарочные сертификаты</h1>
+
+         {% for el in giftCertificates %}
+              <div class="alert alert-warning">
+                  <h3>{{ el.title }}</h3>
+                  <p>{{ el.price }}</p>
+              </div>
+         {% endfor %}
+     </div>
+{% endblock %}
+

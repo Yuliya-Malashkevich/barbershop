@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Услуги для мужчин{% endblock %}
+
+{% block content %}
+     <div class="features">
+     <h1>Услуги для мужчин</h1>
+
+         {% for el in servicesForMen %}
+              <div class="alert alert-warning">
+                  <h3>{{ el.title }}</h3>
+                  <p>{{ el.price }}</p>
+              </div>
+         {% endfor %}
+     </div>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Маникюр и педикюр{% endblock %}
+
+{% block content %}
+     <div class="features">
+     <h1>Маникюр и педикюр</h1>
+
+         {% for el in manicurePedicure %}
+              <div class="alert alert-warning">
+                  <h3>{{ el.title }}</h3>
+                  <p>{{ el.price }}</p>
+              </div>
+         {% endfor %}
+     </div>
+{% endblock %}
+

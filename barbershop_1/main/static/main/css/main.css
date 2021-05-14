@@ -1,0 +1,122 @@
+body {
+    background: #1B1951;
+}
+
+aside {
+    float: left;
+    background: #F5AD13;
+    width: 220px;
+    padding: 2,5%;
+    height: 100vh;
+    color: #fff;
+    border-right:5px solid #4d4d4d;
+}
+
+aside img {
+    float: left;
+    width: 100px;
+}
+
+aside .logo{
+    font-size: 40 px;
+    margin-left: 20px;
+    font-width: bold;
+    color: #0A0C8E
+    margin-top: 50px;
+}
+
+aside span{
+    font-size: 40 px;
+    margin-left: 20px;
+    font-width: bold;
+    color: #0A0C8E
+    margin-top: 50px;
+}
+
+
+h1 {
+    color: #fff;
+}
+
+abbr {
+    color: #E32807;
+}
+
+
+p {
+    float: center;
+    color: #fff;
+}
+
+iframe {
+    height: 350px;
+    width: 800px;
+    float: center;
+}
+
+h6 {
+   color: #fff;
+   float: right;
+}
+
+aside h3 {
+    margin-top: 130px;
+    font-size: 28px;
+}
+
+aside ul {list-style: none}
+aside ul li {
+    margin-top: 20px;
+    font-size: 20px;
+    display: block;
+    transition: transform all .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    text-decoration: none;
+    color: #07051E;
+    transform: scale(1.05);
+}
+
+main .features {
+    float: left;
+    width: 75%;
+    margin-top: 75px;
+    text-align: center;
+}
+
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 400px; margin: 20px auto}
+
+main.map {
+    position: relative;
+    left: 40px;
+    float: right
+}
+
+
+.block-2 {
+    margin: 0 auto;
+    color: #fff;
+
+}
+
+main .userForm {
+    width:300px;
+    display: block;
+    position: relative;
+
+    margin: 0 auto;
+    color: #fff;
+    float: right;
+    text-decoration: overline;
+}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+}
+
