@@ -9,8 +9,8 @@ class User(models.Model):
 
 
 class ServicesForWomen(models.Model):
-    class Meta():
-        verbose_name_plural = "Услуги для женщин"
+    # class Meta():
+    #     verbose_name_plural = "Услуги для женщин"
     title = models.CharField(max_length=128, verbose_name="Название услуги")
     price = models.CharField(max_length=100, verbose_name="Цена")
 
@@ -18,8 +18,8 @@ class ServicesForWomen(models.Model):
         return f"{self.title} {self.price} руб."
 
 class ServicesForMen(models.Model):
-    class Meta():
-        verbose_name_plural = "Услуги для мужчин"
+    # class Meta():
+    #     verbose_name_plural = "Услуги для мужчин"
     title = models.CharField(max_length=128, verbose_name="Название услуги")
     price = models.CharField(max_length=100, verbose_name="Цена")
 
@@ -27,8 +27,8 @@ class ServicesForMen(models.Model):
         return f"{self.title} {self.price} руб."
 
 class ServicesForChildren(models.Model):
-    class Meta():
-        verbose_name_plural = "Услуги для детей "
+    # class Meta():
+    #     verbose_name_plural = "Услуги для детей "
     title = models.CharField(max_length=128, verbose_name="Название услуги")
     price = models.CharField(max_length=100, verbose_name="Цена")
 
@@ -37,8 +37,8 @@ class ServicesForChildren(models.Model):
 
 
 class ManicurePedicure(models.Model):
-    class Meta():
-        verbose_name_plural = "Маникюр-Педикюр"
+    # class Meta():
+    #     verbose_name_plural = "Маникюр-Педикюр"
     title = models.CharField(max_length=128, verbose_name="Название услуги")
     price = models.CharField(max_length=100, verbose_name="Цена")
 
@@ -47,8 +47,8 @@ class ManicurePedicure(models.Model):
 
 
 class CosmetologyServices(models.Model):
-    class Meta():
-        verbose_name_plural = "Косметологические услуги"
+    # class Meta():
+    #     verbose_name_plural = "Косметологические услуги"
     title = models.CharField(max_length=128, verbose_name="Название услуги")
     price = models.CharField(max_length=100, verbose_name="Цена")
 
@@ -57,8 +57,6 @@ class CosmetologyServices(models.Model):
 
 
 class GiftCertificates(models.Model):
-    class Meta():
-        verbose_name_plural = "Подарочные сертификаты"
     title = models.CharField(max_length=128, verbose_name="Название услуги")
     price = models.CharField(max_length=100, verbose_name="Цена")
 

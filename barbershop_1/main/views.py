@@ -26,9 +26,18 @@ def contacts(request):
     data = {
         'title': 'ПАРИКМАХЕРСКАЯ <7 ЖЕЛАНИЙ>',
         'values': ['8 017 263-84-39', '8 029 342-94-61', 'Минск, ул. Янки Лучины, 8'],
-        'form': form,
+        "form": form,
     }
-    return render(request, 'main/contacts.html', data)
+    if request.method == 'POST':
+        user = User()
+        user.name = request.POST.get('name')
+        user.email = request.POST.get('email')
+        user.phone = request.POST.get('phone')
+        user.save()
+        return HttpResponse(f'<h1>Hello {user.name} ur email is {user.email}, phone is {user.phone}</h1>')
+    else:
+        form = userForm()
+        return render(request, "main/contacts.html", data)
 
 # def indexPage(CreateView):
 #     if CreateView.method == 'POST':

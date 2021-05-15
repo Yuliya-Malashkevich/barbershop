@@ -1,17 +1,22 @@
 {% extends 'main/layout.html' %}
-
+{% load static %}
 {% block title %}Подарочные сертификаты{% endblock %}
 
 {% block content %}
      <div class="features">
      <h1>Подарочные сертификаты</h1>
-
+      <style>p{color: black;}</style>
          {% for el in giftCertificates %}
               <div class="alert alert-warning">
-                  <h3>{{ el.title }}</h3>
-                  <p>{{ el.price }}</p>
+                  <h3>{{ el }}</h3>
               </div>
          {% endfor %}
      </div>
+ <div>
+        <a class="giftCertificates-bnr" href="/gift_certificates">
+           <img src="{% static 'main/img/certif.png' %}" style="width: 70%; height: 50%">
+        </a>
+ </div>
 {% endblock %}
+
 

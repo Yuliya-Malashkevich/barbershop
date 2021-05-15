@@ -16,7 +16,7 @@
         </div>
     <div class="userForm">
     <br><p>Вы можете оставить свой номер телефона и мы Вам перезвоним:</p>
-    <form action="." method="POST" novalidate>
+    <form method="POST">
           {% csrf_token %}
           {{ form }}
           <input type="submit" name="user">
