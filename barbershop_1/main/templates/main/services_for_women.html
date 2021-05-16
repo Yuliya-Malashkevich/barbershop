@@ -5,7 +5,10 @@
 {% block content %}
      <div class="features">
      <h1>Услуги для женщин</h1>
-    <style>p{color: black;}</style>
+    <style>p{color: black;}
+    h3{margin: 28px 0px; width:650px;height: 30px;border-radius:3px;}
+    .alert-warning {width: 650px;}
+    </style>
          {% for el in servicesForWomen %}
               <div class="alert alert-warning">
                   <h3>{{ el }}</h3>

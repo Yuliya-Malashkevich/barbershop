@@ -5,9 +5,7 @@
 {% block content %}
     <div class="features">
      <h1>{{ title }}</h1>
-
-<!--     <button class="btn btn-warning">На страницу про нас</button>-->
-
+         <style>p{color: fff;}</style>
         <abbr>ЖЕНСКИЕ СТРИЖКИ</abbr>
         {% for el in values %}
            <p>{{ el }}</p>
@@ -18,27 +16,26 @@
            <p>{{ el }}</p>
        {% endfor %}
 
+        <abbr>ДЕТСКИЕ СТРИЖКИ</abbr>
+        {% for el in values_2 %}
+           <p>{{ el }}</p>
+       {% endfor %}
 
+        <abbr>МАНИКЮР</abbr>
+        {% for el in values_3 %}
+           <p>{{ el }}</p>
+       {% endfor %}
+
+        <abbr>ПЕДИКЮР</abbr>
+        {% for el in values_4 %}
+           <p>{{ el }}</p>
+       {% endfor %}
 
     </div>
 
 {% endblock %}
+<!--     <button class="btn btn-warning">На главную страницу</button>-->
 
 
 
 
-
-<!--<!doctype html>-->
-<!--<html lang="ru">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport"-->
-<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
-<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
-<!--    <title>Про нас</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--    <h1>Про нас</h1>-->
-<!--    <p>Про нас</p>-->
-<!--</body>-->
-<!--</html>-->

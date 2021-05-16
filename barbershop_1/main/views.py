@@ -16,8 +16,11 @@ def index(request):
 def services(request):
     data = {
         'title': 'ПАРИКМАХЕРСКАЯ <7 ЖЕЛАНИЙ>',
-        'values': ['Короткие волосы: 13,00', 'Средние волосы: 18,00', 'Длинные волосы: 23,00'],
-        'values_1': ['стрижка простая, наголо (с использованием 1 насадки): 7,00', 'модельная стрижка: 10,00', 'креативная стрижка (каре,шапочка,ирокез,шейвер и др.): 13,00']
+        'values': ['Короткие волосы: 13,00 руб.', 'Средние волосы: 18,00 руб.', 'Длинные волосы: 23,00 руб.'],
+        'values_1': ['Cтрижка простая, наголо (с использованием 1 насадки): 7,00 руб.', 'Mодельная стрижка: 10,00 руб.', 'Kреативная стрижка (каре,шапочка,ирокез,шейвер и др.): 13,00 руб'],
+        'values_2': ['Mодельная стрижка 5,50 руб.'],
+        'values_3': ['МАНИКЮР КЛАССИЧЕСКИЙ (снятие лака, придание формы ногтям, обработка кутикулы, легкий массаж, салфетка) 10,00 руб.', 'КОМПЛЕКСНЫЙ МАНИКЮР (снятие лака, придание формы ногтям, обработка кутикулы, легкий массаж, полное покрытие, масло, салфетка) 16,00 руб.'],
+        'values_4': ['ЖЕНСКИЙ ПЕДИКЮР от 14,50 руб.', 'МУЖСКОЙ ПЕДИКЮР от 17,50 руб.'],
     }
     return render(request, 'main/services.html', data)
 
@@ -39,17 +42,6 @@ def contacts(request):
         form = userForm()
         return render(request, "main/contacts.html", data)
 
-# def indexPage(CreateView):
-#     if CreateView.method == 'POST':
-#         user = User()
-#         user.name = CreateView.POST.get('name')
-#         user.email = CreateView.POST.get('email')
-#         user.phone = CreateView.POST.get('phone')
-#         user.save()
-#         return HttpResponse(f'<h1>Hello {user.name} ur email is {user.email}, phone is {user.phone}</h1>')
-#     else:
-#         form = userForm()
-#         return render(CreateView, "contacts.html", {'form': form})
 
 def indexPage(request):
     if request.method == 'POST':
@@ -68,7 +60,7 @@ def services_for_women(request):
     return render(request, 'main/services_for_women.html', {'servicesForWomen': servicesForWomen})
 
 def services_for_men(request):
-    servicesForMen = ServicesForWomen.objects.all()
+    servicesForMen = ServicesForMen.objects.all()
     return render(request, 'main/services_for_men.html', {'servicesForMen': servicesForMen})
 
 def services_for_children(request):
