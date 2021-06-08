@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Отзывы{% endblock %}
+
+{% block content %}
+     <div class="features">
+         <h1>Отзывы</h1>
+         {% if reviews %}
+             {% for el in reviews %}
+                 <div class="alert alert-warning">
+                     <h3>{{ el.name }}</h3>
+                     <p>{{ el.review_text }}</p>
+                 </div>
+             {% endfor %}
+         {% else %}
+             <p>Еще нет ни одного отзыва</p>
+         {% endif %}
+     </div>
+{% endblock %}

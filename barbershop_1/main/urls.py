@@ -11,5 +11,7 @@ urlpatterns = [
     path('services_for_children', views.services_for_children, name='services_for_children'),
     path('cosmetology_services', views.cosmetology_services, name='cosmetology_services'),
     path('gift_certificates', views.gift_certificates, name='gift_certificates'),
+    path('reviews', views.reviews, name='reviews'), #отзывы
+    path('add_review', views.add_review, name='add_review')
 
 ]

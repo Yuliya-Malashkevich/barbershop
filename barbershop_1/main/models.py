@@ -63,3 +63,15 @@ class GiftCertificates(models.Model):
     def __str__(self):
         return f"{self.title} {self.price} руб."
 
+class Reviews(models.Model):
+    name = models.CharField('Имя', max_length=50)
+    review_text = models.TextField('Текст отзыва')
+    date = models.DateTimeField('Дата публикации')
+
+    def __str__(self):
+        return self.name, self.review_text, self.date
+
+    class Meta:
+        verbose_name = 'Отзыв'
+        verbose_name_plural = 'Отзывы'
+

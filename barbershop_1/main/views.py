@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import *
 from .models import *
@@ -78,6 +78,30 @@ def cosmetology_services(request):
 def gift_certificates(request):
     giftCertificates = GiftCertificates.objects.all()
     return render(request, 'main/gift_certificates.html', {'giftCertificates': giftCertificates})
+
+def add_review(request):  #провеяем откуда именно добавлен отзыв(из БД или пользователем)
+    error = ''
+    if request.method == 'POST':
+        form = ReviewsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('reviews')    #перенаправляем на страницу Отзывы
+        else:
+            error = 'Форма неверно заполнена!'
+
+    form = ReviewsForm()
+
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'main/add_review.html', data)
+
+def reviews(request):  #отзывы
+    reviews = Reviews.objects.order_by('-date')
+    return render(request, 'main/reviews.html', {'reviews': reviews})
+
+
 
 
 
